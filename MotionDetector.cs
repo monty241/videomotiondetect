@@ -260,9 +260,21 @@ namespace VideoMotionDetect
 						degreeOfActivity++;
 						lastMotionPos = pos;
 
-						if (verbose)
-							Log(Properties.Resources.MotionDetectorMotionDetected, videoFileForLog, pos);
-					}
+						{
+							TimeSpan t = TimeSpan.FromSeconds(pos);
+
+							string timeTxt;
+
+							if (t.Hours != 0)
+							{
+                                timeTxt = string.Format("{0:D2}:{1:D2}:{2:D2}", t.Hours, t.Minutes, t.Seconds);
+                            }
+                            else
+							{
+								timeTxt = string.Format("{0:D2}:{1:D2}", t.Minutes, t.Seconds);
+							}
+							Log(Properties.Resources.MotionDetectorMotionDetected, videoFileForLog, timeTxt);
+						}
 				}
 
 			done:
