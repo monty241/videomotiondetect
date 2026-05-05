@@ -361,7 +361,7 @@ namespace VideoMotionDetect
 			this.thresholdLabel.Location = new System.Drawing.Point(3, 64);
 			this.thresholdLabel.Name = "thresholdLabel";
 			this.thresholdLabel.Size = new System.Drawing.Size(57, 13);
-			this.thresholdLabel.TabIndex = 18;
+			this.thresholdLabel.TabIndex = 5;
 			this.thresholdLabel.Text = "&Threshold:";
 			// 
 			// thresholdNumericUpDown
@@ -380,7 +380,7 @@ namespace VideoMotionDetect
             0});
 			this.thresholdNumericUpDown.Name = "thresholdNumericUpDown";
 			this.thresholdNumericUpDown.Size = new System.Drawing.Size(74, 20);
-			this.thresholdNumericUpDown.TabIndex = 19;
+			this.thresholdNumericUpDown.TabIndex = 5;
 			this.toolTip.SetToolTip(this.thresholdNumericUpDown, resources.GetString("thresholdNumericUpDown.ToolTip"));
 			this.thresholdNumericUpDown.Value = new decimal(new int[] {
             35,
