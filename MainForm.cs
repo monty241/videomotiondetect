@@ -228,8 +228,10 @@ namespace VideoMotionDetect
 					Properties.Resources.BackgroundWorkerError, e.Error.ToString()),
 					this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            TimeSpan duration = DateTime.Now.Subtract((DateTime)e.Result);
+			
 			MessageBox.Show(this, string.Format(CultureInfo.CurrentCulture,
-				Properties.Resources.Finished, DateTime.Now.Subtract((DateTime)e.Result)),
+				Properties.Resources.Finished, duration.ToString("hh\\:mm\\:ss")),
 				Properties.Resources.FinishedTitle, MessageBoxButtons.OK, MessageBoxIcon.None);
 		}
 	}
